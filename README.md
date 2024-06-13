@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is the public archive of Maaria's Crypto Weekly newsletter. 
+
+Please feel free to make pull requests to the posts in the posts directory if you see any fixes that need to be made! (Or contribute translations etc)
 
 ## Getting Started
 
