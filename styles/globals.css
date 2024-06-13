@@ -61,13 +61,13 @@ header h1 {
 
 /* Adjusting the anchor tag within the list */
 #posts li a {
-  color: #0070f3; /* Blue color for post titles */
+  color: #4493f8; /* Blue color for post titles */
   font-size: 1rem; /* Standard font size for posts */
 }
 
 /* Numerical date styles */
 .date-numerical {
-  color: #0070f3; /* Lighter color for the numerical date */
+  color: #4493f8; /* Lighter color for the numerical date */
   margin-right: 1rem; /* Add space between the numerical date and written date */
   font-family: 'GT America Mono Light';
   font-size: 0.99rem;
@@ -116,7 +116,7 @@ header h1 {
 
 /* Ensures links within articles are blue */
 article a {
-  color: #0070f3; /* Adjust the color to the shade of blue you prefer */
+  color: #4493f8; /* Adjust the color to the shade of blue you prefer */
 }
 
 /* Makes the horizontal rule darker and adds margin */
@@ -134,6 +134,6 @@ article p {
 }
 
 .skyblue-link {
-  color: #0070f3;
+  color: #4493f8;
 }
 
