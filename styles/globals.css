@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'GT America Mono Regular';
+  src: url('/fonts/GT-America-Mono-Regular.woff2') format('woff2');
+  font-weight: 500; /* Medium is often considered 500 weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT America Mono Medium';
+  src: url('/fonts/GT-America-Mono-Medium.woff2') format('woff2');
+  font-weight: 500; /* Medium is often considered 500 weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT America Mono Light';
+  src: url('/fonts/GT-America-Mono-Light.woff2') format('woff2');
+  font-weight: 300; /* Medium is often considered 500 weight */
+  font-style: normal;
+}
+
+html, body, footer {
+  font-family: 'GT America Mono Light', sans-serif; /* Fallback font */
+  line-height: 2;
+  background-color: #3f3f3f ;
+  color: whitesmoke;
+}
+
+h1 { font-family: 'GT America Mono Regular', sans-serif; /* Fallback font */
+  line-height: 2;
+  background-color: #3f3f3f;
+  color: whitesmoke;}
+
+main {
+  margin: mx-auto; 
+  flex:content; 
+   
+}
+
+header h2 {
+  font-family: 'GT America Mono Light', sans-serif; /* Fallback font */
+  line-height: 2;
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+header h1 {
+  font-size: 1.5rem; /* Larger font size for the title */
+  color: whitesmoke; /* Dark color for the title */
+}
+
+
+/* Post list styles */
+#posts li {
+  margin-bottom: 1rem; /* Add space between posts */
+}
+
+/* Adjusting the anchor tag within the list */
+#posts li a {
+  color: #0070f3; /* Blue color for post titles */
+  font-size: 1rem; /* Standard font size for posts */
+}
+
+/* Numerical date styles */
+.date-numerical {
+  color: #0070f3; /* Lighter color for the numerical date */
+  margin-right: 1rem; /* Add space between the numerical date and written date */
+  font-family: 'GT America Mono Light';
+  font-size: 0.99rem;
+
+}
+
+/* Written date styles */
+.date-written {
+  color: whitesmoke ; /* Darker color for the written date */
+  font-style: underline; 
+  font-family: 'GT America Mono Light';
+
+}
+
+/* This class is for the post date */
+.post-date {
+  font-size: 0.9rem; /* Smaller font size for date */
+  color: #0070f3; /* Lighter color for date */
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.sidebar {
+  /* Add your styles for the sidebar here */
+  width: mx-auto; /* or as per your design */
+}
+
+.year-filter {
+  /* Add your styles for the year filter buttons here */
+  display: block;
+  margin-bottom: 1px;
+  cursor: pointer;
+  width: mx-auto;
+}
+
+/* You can use the :hover pseudo-class to style the buttons on hover */
+.year-filter:hover {
+  background-color: #3f3f3f;
+}
+
+/* Ensures links within articles are blue */
+article a {
+  color: #0070f3; /* Adjust the color to the shade of blue you prefer */
+}
+
+/* Makes the horizontal rule darker and adds margin */
+article hr {
+  border-color: whitesmoke; /* Darker grey line */
+  margin-top: 1rem; /* Adds space above "THIS WEEK IN CRYPTO" */
+  margin-bottom: 1rem; /* Space after the line if needed */
+}
+
+/* Adds margin between paragraphs for readability */
+article p {
+  margin-bottom: 1rem;
+  font-family: 'GT America Mono Light';
+  font-weight: 200; 
+}
+
+.skyblue-link {
+  color: #0070f3;
+}
+
