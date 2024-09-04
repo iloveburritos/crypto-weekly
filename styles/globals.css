@@ -50,29 +50,19 @@ header h2 {
 }
 
 #posts li {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem; 
 }
 
 #posts li a {
   color: #4493f8;
-  font-size: 1rem;
+  font-size: 3rem;
 }
 
 .date-numerical {
   color: #4493f8;
-  margin-right: 1rem;
   font-style: italic;
   font-size: 1rem; 
-}
-
-.date-written {
-  color: #333333;
-  
-}
-
-.post-date {
-  font-size: 0.9rem;
-  color: #0070f3;
 }
 
 @layer utilities {
@@ -93,7 +83,8 @@ header h2 {
 }
 
 .year-filter:hover {
-  background-color: #3f3f3f;
+  background-color: whitesmoke;
+  text-decoration: underline;
 }
 
 article a, .skyblue-link {
