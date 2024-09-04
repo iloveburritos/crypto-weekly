@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
     <nav className="sticky top-0 max-w-[680px] p-5 flex flex-col sm:flex-row justify-between items-center m-auto text-link pb-3 border-b-2 mb-3 border-border bg-[#FAF9F6] z-10">
-      <header className=" w-full flex items-center">
+      <header className=" w-full flex justify-center">
         <h1 className="font-bold text-center sm:text-left">
           <Link href="/" className="font-bold whitespace-nowrap" style={{ position: 'relative', top: '5px' }}>Crypto Weekly</Link>
         </h1>
