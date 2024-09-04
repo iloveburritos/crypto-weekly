@@ -6,23 +6,32 @@ import Layout from '../components/Layout';
 const About = () => {
   return (
     <>
-      <Layout >
+      <Layout>
         <div className="max-w-[680px] mx-auto p-3">
           <div className="my-4">
-            <p className="mb-5">Crypto Weekly is a newsletter that summarizes the biggest blockchain and crypto news stories of the week. <a href="https://www.linkedin.com/in/maariab" className="hover:underline skyblue-link"><strong>Maaria Bajwa</strong></a> has been writing the newsletter since 2017. </p>
-            <p className="mb-5">I am currently a venture capitalist at <a href="https://timespan.vc" target="_blank" rel="noopener noreferrer" className="hover:underline skyblue-link"><strong>Timespan Ventures</strong></a>, deeply interested in blockchain and crypto technology. </p>
-            <p className="mb-5">Crypto Weekly has always been (and forever will be) free. No advertisements or paid stories included. That means even though we try to get it out every Sunday, we&aposll occasionally skip a week or send a day late.</p>
-            <p className="mb-5">Co-authored by <a href="https://www.linkedin.com/in/david-blumenfeld-b2a9335a/" target="_blank" rel="noopener noreferrer" className="hover:underline skyblue-link"><strong>David Blumenfeld</strong></a> since 2022.</p>
-            <p className="mb-5">All Crypto Weekly archives are also available on GitHub <a href="https://www.github.com/iloveburritos" className="hover:underline skyblue-link"><strong>HERE</strong></a></p>
-            <div className="flex flex-col mt-4">
-              <p className="mb-4">Questions? Comments? Email me at <a href="mailto:maariabajwa@gmail.com" className="hover:underline skyblue-link"><strong>maariabajwa@gmail.com</strong></a></p>
-            </div>
+            <p className="whitespace-pre-wrap">
+              A weekly newsletter written by <a href="https://maaria.com" className="hover:underline skyblue-link"><strong>Maaria Bajwa</strong></a> since 2017. I'm a co-founder of Timespan Ventures, an early stage venture fund investing in emerging tech like crypto. 
+              
+              {'\n\n'}
+              Prior to Timespan, I was investing at Sound Ventures (co-founded by Ashton Kutcher and Guy Oseary). 
+
+              {'\n\n'}
+              Crypto Weekly is a public resource for the community. There will never be a subscription fee. No ads. No sponsorship.
+
+              {'\n\n'}
+              All posts are archived on GitHub here: <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:underline skyblue-link">https://github.com/iloveburritos/crypto-weekly</a>.
+
+              {'\n\n'}
+              I started writing Crypto Weekly in 2017 as a resource for a small group of friends. It has since grown to over 5k readers.
+
+              {'\n\n'}
+              <a href="https://x.com/serdaveeth_" target="_blank" rel="noopener noreferrer" className="hover:underline skyblue-link">@serdave</a> has been co-authoring the newsletter in 2023.
+            </p>
           </div>
         </div>
-      </Layout >
+      </Layout>
     </>
   );
 };
-
 
 export default About;
