@@ -61,8 +61,10 @@ export default function Home({ posts }) {
           <PostList posts={recentPosts} />
         </posts>
         <h2 className="text-lg max-w-[680px] mx-auto flex justify-center mt-5"> 
-        <Link className="hover:underline" href="/posts?reset=true">All Posts 👉</Link>
-        </h2>        
+            <Link href="/posts?reset=true" className="hover:underline text-lg font-semibold text-blue-600 bg-[#FAF9F6] px-4 py-2 rounded-lg shadow-md hover:bg-blue-50 transition duration-300">
+                All Posts 👉
+            </Link>
+          </h2>            
       </main>
     </Layout>
     </>

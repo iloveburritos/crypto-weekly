@@ -42,11 +42,11 @@ main {
 }
 
 header h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 header h2 {
-  font-size: 30px;
+  font-size: 1.5rem;
 }
 
 #posts li {
