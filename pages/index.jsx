@@ -45,6 +45,15 @@ export default function Home({ posts }) {
     <Layout>
       <header className="text-center p-4">
         <h2 className="text-lg justify-center sm:text-md max-w-[680px] mx-auto flex">A weekly summary of blockchain and crypto industry news.</h2>
+        <h2 className="text-lg justify-center sm:text-md max-w-[680px] mx-auto flex">All posts are publicly archived on <a 
+    href="https://github.com/iloveburritos/crypto-weekly" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:underline text-blue-600 ml-1"
+  >
+    GitHub
+  </a>.
+</h2>
       </header>
       <main className="text-center">
         <posts>
