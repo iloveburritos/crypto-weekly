@@ -1,12 +1,20 @@
 // components/Footer.js
+import Link from 'next/link';
+import SearchBar from './SearchBar';
 
 const Footer = () => {
   return (
-    <footer className="d p-4 text-center mx-auto ">
-      <nav className="max-w-[680px] p-3 flex justify-between m-auto text-link pb-3 border-b-2 mb-3 border-border"></nav>
+    <footer className="text-center mx-auto ">
+      <nav className="max-w-[680px] flex m-auto text-link border-b-2 mb-7"></nav>
       <div>
-        <h1 className="text-center text-2xl font-bold mb-4"></h1>
-        <div className="flex justify-center text-center mb-4" >
+      <div className="flex gap-4 justify-center sm:w-auto">
+      <div className="mb-6" >
+          <SearchBar />
+        </div>
+        
+      </div>
+
+        <div className="flex justify-center text-center mt-5 mb-10" >
           <iframe
             title="Substack Signup"
             src="https://thisweekincrypto.substack.com/embed"
@@ -17,9 +25,11 @@ const Footer = () => {
             frameBorder="0"
             scrolling="no"
           ></iframe>
+
         </div>
+        <p>&copy; {new Date().getFullYear()} Crypto Weekly. Thank you for reading.</p>
       </div>
-      <p>&copy; {new Date().getFullYear()} Crypto Weekly. Thank you for reading.</p>
+      
     </footer>
   );
 };

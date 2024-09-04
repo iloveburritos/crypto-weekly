@@ -10,7 +10,7 @@ import remarkBreaks from 'remark-breaks';
 
 
 export default function PostPage({ frontmatter, content }) {
-    const { title, longdate } = frontmatter;
+    const { date, longdate } = frontmatter;
     const router = useRouter();
 
     if (router.isFallback) {
@@ -21,8 +21,8 @@ export default function PostPage({ frontmatter, content }) {
         <>
           <Layout>
           <div className="max-w-[680px] mx-auto px-4 py-8">
-            <h2 className="text-2xl font-bold text-left mb-1 underline">{title}</h2>
-            <p className="text-left italic mb-8">{longdate}</p>
+            <h2 className="text-2xl font-bold text-left mb-1 underline">{longdate}</h2>
+            <p className="text-left italic mb-8">{date}</p>
             <article className="prose max-w-none">
               <ReactMarkdown
                 remarkPlugins={[remarkBreaks]}

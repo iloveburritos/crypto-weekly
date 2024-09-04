@@ -15,7 +15,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="max-w-[680px] p-4 flex sm:flex-row justify-center m-auto mt-6">
+    <div className="max-w-[680px] flex sm:flex-row justify-center m-auto">
     <form onSubmit={handleSearch} className="flex">
       <input
         type="text"

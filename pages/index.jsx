@@ -44,16 +44,27 @@ export default function Home({ posts }) {
     <>
     <Layout>
       <header className="text-center p-4">
-        <h2 className="text-lg sm:text-md max-w-[680px] mx-auto flex">Crypto Weekly is a weekly newsletter that summarizes the latest blockchain and crypto news stories.</h2>
+        <h2 className="text-lg justify-center sm:text-md max-w-[680px] mx-auto flex">A weekly summary of blockchain and crypto industry news.</h2>
+        <h2 className="text-lg justify-center sm:text-md max-w-[680px] mx-auto flex">All posts are publicly archived on <a 
+    href="https://github.com/iloveburritos/crypto-weekly" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:underline text-blue-600 ml-1"
+  >
+    GitHub
+  </a>.
+</h2>
       </header>
       <main className="text-center">
         <posts>
-          <h1 className="text-2xl font-bold my-4 underline">Recent Posts</h1>
+          <h1 className="text-2xl font-bold my-4 underline">Latest Posts</h1>
           <PostList posts={recentPosts} />
         </posts>
         <h2 className="text-lg max-w-[680px] mx-auto flex justify-center mt-5"> 
-        <Link className="hover:underline" href="/posts?reset=true">All Posts 👉</Link>
-        </h2>        
+            <Link href="/posts?reset=true" className="hover:underline text-lg font-semibold text-blue-600 bg-[#FAF9F6] px-4 py-2 rounded-lg shadow-md hover:bg-blue-50 transition duration-300">
+                All Posts 👉
+            </Link>
+          </h2>            
       </main>
     </Layout>
     </>
