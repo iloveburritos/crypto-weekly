@@ -99,4 +99,62 @@ article hr {
 article p {
   margin-bottom: 1rem;
   font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Enhanced reading experience */
+article {
+  line-height: 1.7;
+}
+
+article h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+article h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+article ul, article ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+article li {
+  margin-bottom: 0.25rem;
+}
+
+article blockquote {
+  border-left: 4px solid #4493f8;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #666;
+}
+
+/* Code styling */
+article code {
+  background-color: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+article pre {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+article pre code {
+  background-color: transparent;
+  padding: 0;
 }
