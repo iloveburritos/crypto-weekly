@@ -1,11 +1,14 @@
 import Link from 'next/link';
+import TerminalLogo from './TerminalLogo';
 
 const Navbar = () => {
   return (
     <nav className="sticky top-0 max-w-[680px] p-5 flex flex-col sm:flex-row justify-between items-center m-auto text-link pb-3 border-b-2 mb-3 border-border bg-[#FAF9F6] z-10">
       <header className=" w-full flex justify-center">
-        <h1 className="font-bold text-center sm:text-left">
-          <Link href="/" className="font-bold whitespace-nowrap" style={{ position: 'relative', top: '5px' }}>Crypto Weekly</Link>
+        <h1 className="text-center sm:text-left">
+          <Link href="/" className="hover:opacity-80 transition-opacity duration-200">
+            <TerminalLogo size="28" />
+          </Link>
         </h1>
       </header>
       <div className="order-1 sm:order-2 flex gap-5 justify-center sm:justify-end w-full sm:w-auto items-center">
