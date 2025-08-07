@@ -28,11 +28,11 @@ const About = () => {
             </div>
 
             <p>
-              A weekly newsletter written by <a href="https://maaria.com" className="hover:underline skyblue-link"><strong>Maaria Bajwa</strong></a> since 2017. I am a co-founder of Timespan Ventures, an early stage venture fund investing in emerging tech like crypto.
+              A weekly newsletter written by <a href="https://maaria.com" className="hover:underline skyblue-link"><strong>Maaria Bajwa</strong></a> since 2017. I am an angel investor focused on emerging tech like crypto.
             </p>
             <br />
             <p>
-              Prior to Timespan, I was investing at Sound Ventures (co-founded by Ashton Kutcher and Guy Oseary).
+              Previously, I was investing at Sound Ventures (co-founded by Ashton Kutcher and Guy Oseary).
             </p>
             <br />
             <p>
