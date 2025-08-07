@@ -1,8 +1,8 @@
 // components/TerminalLogo.js
 
-const TerminalLogo = ({ size = "32" }) => {
+const TerminalLogo = ({ size = "40" }) => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-4">
       {/* Terminal Icon */}
       <svg 
         width={size} 
@@ -14,11 +14,11 @@ const TerminalLogo = ({ size = "32" }) => {
       >
         {/* Terminal Box */}
         <rect 
-          x="10" 
-          y="15" 
-          width="80" 
-          height="70" 
-          rx="8" 
+          x="8" 
+          y="12" 
+          width="84" 
+          height="76" 
+          rx="10" 
           stroke="currentColor" 
           strokeWidth="6" 
           fill="none"
@@ -26,9 +26,9 @@ const TerminalLogo = ({ size = "32" }) => {
         
         {/* Terminal Prompt Arrow */}
         <path 
-          d="M25 35 L35 45 L25 55" 
+          d="M22 35 L35 48 L22 61" 
           stroke="currentColor" 
-          strokeWidth="4" 
+          strokeWidth="5" 
           strokeLinecap="round" 
           strokeLinejoin="round" 
           fill="none"
@@ -37,19 +37,20 @@ const TerminalLogo = ({ size = "32" }) => {
         {/* Terminal Cursor Line */}
         <line 
           x1="45" 
-          y1="45" 
-          x2="65" 
-          y2="45" 
+          y1="48" 
+          x2="70" 
+          y2="48" 
           stroke="currentColor" 
-          strokeWidth="4" 
+          strokeWidth="5" 
           strokeLinecap="round"
         />
       </svg>
       
-      {/* Text Logo */}
-      <span className="font-bold text-xl tracking-wide">
-        CRYPTO WEEKLY
-      </span>
+      {/* Text Logo - Two Lines */}
+      <div className="flex flex-col leading-tight">
+        <span className="font-bold text-xl tracking-wide">CRYPTO</span>
+        <span className="font-bold text-xl tracking-wide">WEEKLY</span>
+      </div>
     </div>
   );
 };

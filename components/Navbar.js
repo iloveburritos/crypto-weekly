@@ -7,7 +7,7 @@ const Navbar = () => {
       <header className=" w-full flex justify-center">
         <h1 className="text-center sm:text-left">
           <Link href="/" className="hover:opacity-80 transition-opacity duration-200">
-            <TerminalLogo size="28" />
+            <TerminalLogo size="32" />
           </Link>
         </h1>
       </header>
