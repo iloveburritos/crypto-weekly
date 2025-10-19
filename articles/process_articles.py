@@ -310,8 +310,8 @@ class ArticleProcessor:
             if not match:
                 return False, "Could not find 'THIS WEEK IN CRYPTO' section"
 
-            # Create new entry
-            new_entry = f"\\- {summary} [Link]({url}).\n"
+            # Create new entry with extra line for spacing
+            new_entry = f"\\- {summary} [Link]({url}).\n\n"
 
             # Check if this summary already exists (avoid duplicates)
             if new_entry.strip() in content:
