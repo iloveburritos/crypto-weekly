@@ -116,21 +116,35 @@ class ArticleProcessor:
 
             for url in urls:
                 # Extract key parts from URL for matching
-                # Example: "paxos-mistakenly-issues-300-trillion" from URL
                 url_parts = url.split('/')
                 if url_parts:
-                    slug = url_parts[-1]  # Last part of URL
-                    # Also store domain for matching
+                    slug = url_parts[-1] if url_parts[-1] else url_parts[-2]  # Last non-empty part
+
+                    # Detect source from URL
                     if 'bloomberg.com' in url:
                         source = 'bloomberg'
                     elif 'theblock.co' in url:
                         source = 'theblock'
                     elif 'unchained' in url:
                         source = 'unchained'
+                    elif 'fortune.com' in url:
+                        source = 'fortune'
+                    elif 'reuters.com' in url:
+                        source = 'reuters'
+                    elif 'decrypt.co' in url:
+                        source = 'decrypt'
                     else:
                         source = 'unknown'
 
-                    links_map[slug.lower()] = {'url': url, 'source': source}
+                    # Store full URL path for better matching (not just slug)
+                    full_path = '/'.join(url_parts[3:])  # Everything after domain
+
+                    links_map[slug.lower()] = {
+                        'url': url,
+                        'source': source,
+                        'slug': slug.lower(),
+                        'full_path': full_path.lower()
+                    }
 
             self.log(f"Loaded {len(links_map)} URLs from links.md")
             return links_map
@@ -154,37 +168,61 @@ class ArticleProcessor:
         normalized_title = re.sub(r'[^\w\s-]', '', normalized_title)
         normalized_title = re.sub(r'\s+', '-', normalized_title)
 
-        # Extract source from title
+        # Extract source from title (more comprehensive)
         source = None
         if 'bloomberg' in normalized_title:
             source = 'bloomberg'
-        elif 'block' in normalized_title:
+        elif 'the-block' in normalized_title or normalized_title.endswith('-the-block'):
             source = 'theblock'
         elif 'unchained' in normalized_title:
             source = 'unchained'
+        elif 'fortune' in normalized_title or 'fortune-crypto' in normalized_title:
+            source = 'fortune'
+        elif 'reuters' in normalized_title:
+            source = 'reuters'
+        elif 'decrypt' in normalized_title:
+            source = 'decrypt'
+
+        # Extract keywords from title (remove common words and source names)
+        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
+                      'of', 'with', 'by', 'from', 'as', 'is', 'are', 'was', 'were',
+                      'bloomberg', 'theblock', 'the-block', 'fortune', 'fortune-crypto',
+                      'crypto', 'reuters', 'unchained', 'decrypt'}
+
+        title_words = [w for w in normalized_title.split('-') if w and w not in stop_words]
 
         # Try to find best match
         best_match = None
         best_score = 0
 
         for slug, link_info in self.links_map.items():
-            # Check if source matches
-            if source and link_info['source'] != source:
-                continue
+            # Prefer source match but don't require it
+            source_bonus = 0.3 if source and link_info['source'] == source else 0
 
-            # Calculate similarity score (simple word matching)
-            slug_words = set(slug.split('-'))
-            title_words = set(normalized_title.split('-'))
-            common_words = slug_words.intersection(title_words)
+            # Get words from both slug and full path for better matching
+            url_text = link_info['full_path'].replace('/', '-')
+            url_words = [w for w in url_text.split('-') if w and w not in stop_words]
+
+            # Calculate similarity based on word overlap
+            title_set = set(title_words)
+            url_set = set(url_words)
+            common_words = title_set.intersection(url_set)
 
             if len(common_words) > 0:
-                score = len(common_words) / max(len(slug_words), len(title_words))
+                # Use Jaccard similarity with source bonus
+                jaccard = len(common_words) / len(title_set.union(url_set))
+                score = jaccard + source_bonus
+
+                # Extra boost for exact slug matches
+                if any(word in link_info['slug'] for word in title_words[:5]):  # First 5 words
+                    score += 0.1
+
                 if score > best_score:
                     best_score = score
                     best_match = link_info['url']
 
-        # Return match if score is good enough
-        if best_score > 0.3:  # 30% word overlap
+        # Lower threshold to 0.2 for better matching
+        if best_score > 0.2:
             return best_match
 
         return None
@@ -226,7 +264,7 @@ class ArticleProcessor:
                 try:
                     if self.use_anthropic:
                         response = self.api_client.messages.create(
-                            model="claude-3-5-sonnet-20241022",
+                            model="claude-3-haiku-20240307",
                             max_tokens=200,
                             messages=[{
                                 "role": "user",
