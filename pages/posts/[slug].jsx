@@ -212,9 +212,9 @@ export async function getStaticProps({ params: { slug } }) {
     // Find current post index
     const currentIndex = posts.findIndex(post => post.slug === slug);
     
-    // Get previous and next posts (previous is newer, next is older)
-    const prevPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
-    const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+    // Get previous and next posts (previous is older, next is newer)
+    const prevPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+    const nextPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
 
     return {
         props: {
