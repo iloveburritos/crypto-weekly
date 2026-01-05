@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const Sidebar = ({ onSelectYear }) => {
-  const years = ['All', '2024', '2023', '2022', '2021', '2020', '2019', '2018'];
+  const years = ['All', '2026', '2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018'];
   return (
     <aside className="sidebar flex flex-col items-start w-full">
       <ul>
