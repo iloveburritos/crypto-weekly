@@ -38,4 +38,8 @@ next-env.d.ts
 # template
 /posts/template
 
-
+# private files
+/articles/
+/scripts/
+missing-posts*.md
+resolve_links.sh
