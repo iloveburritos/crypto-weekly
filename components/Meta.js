@@ -17,6 +17,8 @@ const Meta = ({ title, description }) => {
       <meta property="og:url" content="https://thisweekincrypto.substack.com/" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content="@maariabajwa" />
       <link rel="icon" href="/terminal-favicon.svg" type="image/svg+xml" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
