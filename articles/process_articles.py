@@ -264,7 +264,7 @@ class ArticleProcessor:
                 try:
                     if self.use_anthropic:
                         response = self.api_client.messages.create(
-                            model="claude-3-haiku-20240307",
+                            model="claude-haiku-4-5-20251001",
                             max_tokens=200,
                             messages=[{
                                 "role": "user",
