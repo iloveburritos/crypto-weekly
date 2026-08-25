@@ -81,7 +81,7 @@ const About = () => {
             <h1 className="text-2xl font-bold mb-4">About Crypto Weekly</h1>
 
             <p className="mb-4">
-              Crypto Weekly is a free weekly newsletter delivering the most important cryptocurrency and blockchain news in one concise digest. Published every week since 2017, it's one of the longest-running crypto newsletters — covering markets, protocols, regulations, stablecoins, DeFi, NFTs, and other emerging crypto trends so you don't have to spend hours tracking it all yourself.
+              Crypto Weekly is a free weekly newsletter delivering the most important cryptocurrency and blockchain news in one concise digest. Published every week since 2017, it&apos;s one of the longest-running crypto newsletters — covering markets, protocols, regulations, stablecoins, DeFi, NFTs, and other emerging crypto trends so you don&apos;t have to spend hours tracking it all yourself.
             </p>
 
             <p className="mb-4">
