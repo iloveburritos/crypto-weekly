@@ -11,7 +11,7 @@ const jsonLd = {
   name: 'Crypto Weekly',
   url: 'https://thisweekincrypto.substack.com',
   description:
-    'A free weekly cryptocurrency and blockchain newsletter curating the biggest news since 2017. Written by Maaria Bajwa.',
+    'A free weekly cryptocurrency and blockchain newsletter curating the biggest news since 2018. Written by Maaria Bajwa.',
   author: {
     '@type': 'Person',
     name: 'Maaria Bajwa',
@@ -35,13 +35,13 @@ const About = () => {
         <title>About Crypto Weekly — Free Weekly Crypto &amp; Blockchain Newsletter</title>
         <meta
           name="description"
-          content="Crypto Weekly is a free weekly newsletter delivering the most important cryptocurrency and blockchain news since 2017. No ads, no sponsors — just curated crypto news for 5,000+ readers."
+          content="Crypto Weekly is a free weekly newsletter delivering the most important cryptocurrency and blockchain news since 2018. No ads, no sponsors — just curated crypto news for 5,000+ readers."
         />
         <link rel="canonical" href="https://thisweekincrypto.substack.com/about" />
         <meta property="og:title" content="About Crypto Weekly — Free Weekly Crypto & Blockchain Newsletter" />
         <meta
           property="og:description"
-          content="Crypto Weekly is a free weekly newsletter delivering the most important cryptocurrency and blockchain news since 2017. No ads, no sponsors — just curated crypto news for 5,000+ readers."
+          content="Crypto Weekly is a free weekly newsletter delivering the most important cryptocurrency and blockchain news since 2018. No ads, no sponsors — just curated crypto news for 5,000+ readers."
         />
         <meta property="og:url" content="https://thisweekincrypto.substack.com/about" />
         <meta property="og:type" content="website" />
@@ -50,7 +50,7 @@ const About = () => {
         <meta name="twitter:title" content="About Crypto Weekly — Free Weekly Crypto & Blockchain Newsletter" />
         <meta
           name="twitter:description"
-          content="Free weekly crypto newsletter curating the biggest blockchain and cryptocurrency news since 2017."
+          content="Free weekly crypto newsletter curating the biggest blockchain and cryptocurrency news since 2018."
         />
         <script
           type="application/ld+json"
